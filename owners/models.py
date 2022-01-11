@@ -5,7 +5,7 @@ from django.db.models.deletion import CASCADE
 class Owner(models.Model):
     name = models.CharField(max_length=45)
     email = models.CharField(max_length=300, unique=True)
-    age = models.IntegerField
+    age = models.IntegerField(null=True)
 
     class Meta:
         db_table = 'owners'
@@ -13,7 +13,7 @@ class Owner(models.Model):
 class Dog(models.Model):
     owner = models.ForeignKey(Owner, on_delete=CASCADE)
     name = models.CharField(max_length=45)
-    age = models.IntegerField
+    age = models.IntegerField(null=True)
 
     class Meta:
         db_table = 'dogs'
