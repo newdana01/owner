@@ -1,4 +1,3 @@
-from django.db.models.query_utils import Q
 from django.http import JsonResponse
 from django.views import View
 import json
