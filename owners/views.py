@@ -38,8 +38,6 @@ class OwnerView(View):
                         }
                     )
                 result[index]['dog'] = dog_result
-                print(index)
-                print(result)
 
         return JsonResponse({'owners':result}, status=200)
 
